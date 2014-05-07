@@ -22,6 +22,7 @@
 		F116157C191AB3B300C337DD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F116155B191AB3B300C337DD /* UIKit.framework */; };
 		F1161584191AB3B300C337DD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F1161582191AB3B300C337DD /* InfoPlist.strings */; };
 		F1161586191AB3B300C337DD /* iGlookupTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F1161585191AB3B300C337DD /* iGlookupTests.m */; };
+		F1161591191AD94A00C337DD /* SLAssignmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1161590191AD94A00C337DD /* SLAssignmentViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		F1161581191AB3B300C337DD /* iGlookupTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iGlookupTests-Info.plist"; sourceTree = "<group>"; };
 		F1161583191AB3B300C337DD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F1161585191AB3B300C337DD /* iGlookupTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iGlookupTests.m; sourceTree = "<group>"; };
+		F116158F191AD94A00C337DD /* SLAssignmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLAssignmentViewController.h; sourceTree = "<group>"; };
+		F1161590191AD94A00C337DD /* SLAssignmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLAssignmentViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +121,8 @@
 				F1161566191AB3B300C337DD /* SLAppDelegate.h */,
 				F1161567191AB3B300C337DD /* SLAppDelegate.m */,
 				F1161569191AB3B300C337DD /* Main.storyboard */,
+				F116158F191AD94A00C337DD /* SLAssignmentViewController.h */,
+				F1161590191AD94A00C337DD /* SLAssignmentViewController.m */,
 				F116156C191AB3B300C337DD /* SLAccountViewController.h */,
 				F116156D191AB3B300C337DD /* SLAccountViewController.m */,
 				F116156F191AB3B300C337DD /* SLDetailViewController.h */,
@@ -256,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1161571191AB3B300C337DD /* SLDetailViewController.m in Sources */,
+				F1161591191AD94A00C337DD /* SLAssignmentViewController.m in Sources */,
 				F116156E191AB3B300C337DD /* SLAccountViewController.m in Sources */,
 				F1161564191AB3B300C337DD /* main.m in Sources */,
 				F1161568191AB3B300C337DD /* SLAppDelegate.m in Sources */,

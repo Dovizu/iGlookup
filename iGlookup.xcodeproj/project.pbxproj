@@ -1,0 +1,478 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F1161558191AB3B300C337DD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1161557191AB3B300C337DD /* Foundation.framework */; };
+		F116155A191AB3B300C337DD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1161559191AB3B300C337DD /* CoreGraphics.framework */; };
+		F116155C191AB3B300C337DD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F116155B191AB3B300C337DD /* UIKit.framework */; };
+		F1161562191AB3B300C337DD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F1161560191AB3B300C337DD /* InfoPlist.strings */; };
+		F1161564191AB3B300C337DD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F1161563191AB3B300C337DD /* main.m */; };
+		F1161568191AB3B300C337DD /* SLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F1161567191AB3B300C337DD /* SLAppDelegate.m */; };
+		F116156B191AB3B300C337DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1161569191AB3B300C337DD /* Main.storyboard */; };
+		F116156E191AB3B300C337DD /* SLMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F116156D191AB3B300C337DD /* SLMasterViewController.m */; };
+		F1161571191AB3B300C337DD /* SLDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1161570191AB3B300C337DD /* SLDetailViewController.m */; };
+		F1161573191AB3B300C337DD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1161572191AB3B300C337DD /* Images.xcassets */; };
+		F116157A191AB3B300C337DD /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1161579191AB3B300C337DD /* XCTest.framework */; };
+		F116157B191AB3B300C337DD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1161557191AB3B300C337DD /* Foundation.framework */; };
+		F116157C191AB3B300C337DD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F116155B191AB3B300C337DD /* UIKit.framework */; };
+		F1161584191AB3B300C337DD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F1161582191AB3B300C337DD /* InfoPlist.strings */; };
+		F1161586191AB3B300C337DD /* iGlookupTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F1161585191AB3B300C337DD /* iGlookupTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F116157D191AB3B300C337DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F116154C191AB3B300C337DD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F1161553191AB3B300C337DD;
+			remoteInfo = iGlookup;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F1161554191AB3B300C337DD /* iGlookup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iGlookup.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1161557191AB3B300C337DD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F1161559191AB3B300C337DD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F116155B191AB3B300C337DD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F116155F191AB3B300C337DD /* iGlookup-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iGlookup-Info.plist"; sourceTree = "<group>"; };
+		F1161561191AB3B300C337DD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F1161563191AB3B300C337DD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F1161565191AB3B300C337DD /* iGlookup-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iGlookup-Prefix.pch"; sourceTree = "<group>"; };
+		F1161566191AB3B300C337DD /* SLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLAppDelegate.h; sourceTree = "<group>"; };
+		F1161567191AB3B300C337DD /* SLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLAppDelegate.m; sourceTree = "<group>"; };
+		F116156A191AB3B300C337DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F116156C191AB3B300C337DD /* SLMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLMasterViewController.h; sourceTree = "<group>"; };
+		F116156D191AB3B300C337DD /* SLMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLMasterViewController.m; sourceTree = "<group>"; };
+		F116156F191AB3B300C337DD /* SLDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLDetailViewController.h; sourceTree = "<group>"; };
+		F1161570191AB3B300C337DD /* SLDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLDetailViewController.m; sourceTree = "<group>"; };
+		F1161572191AB3B300C337DD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F1161578191AB3B300C337DD /* iGlookupTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iGlookupTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1161579191AB3B300C337DD /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		F1161581191AB3B300C337DD /* iGlookupTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iGlookupTests-Info.plist"; sourceTree = "<group>"; };
+		F1161583191AB3B300C337DD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F1161585191AB3B300C337DD /* iGlookupTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iGlookupTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F1161551191AB3B300C337DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F116155A191AB3B300C337DD /* CoreGraphics.framework in Frameworks */,
+				F116155C191AB3B300C337DD /* UIKit.framework in Frameworks */,
+				F1161558191AB3B300C337DD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1161575191AB3B300C337DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F116157A191AB3B300C337DD /* XCTest.framework in Frameworks */,
+				F116157C191AB3B300C337DD /* UIKit.framework in Frameworks */,
+				F116157B191AB3B300C337DD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F116154B191AB3B300C337DD = {
+			isa = PBXGroup;
+			children = (
+				F116155D191AB3B300C337DD /* iGlookup */,
+				F116157F191AB3B300C337DD /* iGlookupTests */,
+				F1161556191AB3B300C337DD /* Frameworks */,
+				F1161555191AB3B300C337DD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F1161555191AB3B300C337DD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F1161554191AB3B300C337DD /* iGlookup.app */,
+				F1161578191AB3B300C337DD /* iGlookupTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F1161556191AB3B300C337DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F1161557191AB3B300C337DD /* Foundation.framework */,
+				F1161559191AB3B300C337DD /* CoreGraphics.framework */,
+				F116155B191AB3B300C337DD /* UIKit.framework */,
+				F1161579191AB3B300C337DD /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F116155D191AB3B300C337DD /* iGlookup */ = {
+			isa = PBXGroup;
+			children = (
+				F1161566191AB3B300C337DD /* SLAppDelegate.h */,
+				F1161567191AB3B300C337DD /* SLAppDelegate.m */,
+				F1161569191AB3B300C337DD /* Main.storyboard */,
+				F116156C191AB3B300C337DD /* SLMasterViewController.h */,
+				F116156D191AB3B300C337DD /* SLMasterViewController.m */,
+				F116156F191AB3B300C337DD /* SLDetailViewController.h */,
+				F1161570191AB3B300C337DD /* SLDetailViewController.m */,
+				F1161572191AB3B300C337DD /* Images.xcassets */,
+				F116155E191AB3B300C337DD /* Supporting Files */,
+			);
+			path = iGlookup;
+			sourceTree = "<group>";
+		};
+		F116155E191AB3B300C337DD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F116155F191AB3B300C337DD /* iGlookup-Info.plist */,
+				F1161560191AB3B300C337DD /* InfoPlist.strings */,
+				F1161563191AB3B300C337DD /* main.m */,
+				F1161565191AB3B300C337DD /* iGlookup-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F116157F191AB3B300C337DD /* iGlookupTests */ = {
+			isa = PBXGroup;
+			children = (
+				F1161585191AB3B300C337DD /* iGlookupTests.m */,
+				F1161580191AB3B300C337DD /* Supporting Files */,
+			);
+			path = iGlookupTests;
+			sourceTree = "<group>";
+		};
+		F1161580191AB3B300C337DD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F1161581191AB3B300C337DD /* iGlookupTests-Info.plist */,
+				F1161582191AB3B300C337DD /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F1161553191AB3B300C337DD /* iGlookup */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F1161589191AB3B300C337DD /* Build configuration list for PBXNativeTarget "iGlookup" */;
+			buildPhases = (
+				F1161550191AB3B300C337DD /* Sources */,
+				F1161551191AB3B300C337DD /* Frameworks */,
+				F1161552191AB3B300C337DD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iGlookup;
+			productName = iGlookup;
+			productReference = F1161554191AB3B300C337DD /* iGlookup.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F1161577191AB3B300C337DD /* iGlookupTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F116158C191AB3B300C337DD /* Build configuration list for PBXNativeTarget "iGlookupTests" */;
+			buildPhases = (
+				F1161574191AB3B300C337DD /* Sources */,
+				F1161575191AB3B300C337DD /* Frameworks */,
+				F1161576191AB3B300C337DD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F116157E191AB3B300C337DD /* PBXTargetDependency */,
+			);
+			name = iGlookupTests;
+			productName = iGlookupTests;
+			productReference = F1161578191AB3B300C337DD /* iGlookupTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F116154C191AB3B300C337DD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SL;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Scouting Legion";
+				TargetAttributes = {
+					F1161577191AB3B300C337DD = {
+						TestTargetID = F1161553191AB3B300C337DD;
+					};
+				};
+			};
+			buildConfigurationList = F116154F191AB3B300C337DD /* Build configuration list for PBXProject "iGlookup" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F116154B191AB3B300C337DD;
+			productRefGroup = F1161555191AB3B300C337DD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F1161553191AB3B300C337DD /* iGlookup */,
+				F1161577191AB3B300C337DD /* iGlookupTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F1161552191AB3B300C337DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1161573191AB3B300C337DD /* Images.xcassets in Resources */,
+				F1161562191AB3B300C337DD /* InfoPlist.strings in Resources */,
+				F116156B191AB3B300C337DD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1161576191AB3B300C337DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1161584191AB3B300C337DD /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F1161550191AB3B300C337DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1161571191AB3B300C337DD /* SLDetailViewController.m in Sources */,
+				F116156E191AB3B300C337DD /* SLMasterViewController.m in Sources */,
+				F1161564191AB3B300C337DD /* main.m in Sources */,
+				F1161568191AB3B300C337DD /* SLAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1161574191AB3B300C337DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1161586191AB3B300C337DD /* iGlookupTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F116157E191AB3B300C337DD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F1161553191AB3B300C337DD /* iGlookup */;
+			targetProxy = F116157D191AB3B300C337DD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F1161560191AB3B300C337DD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F1161561191AB3B300C337DD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F1161569191AB3B300C337DD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F116156A191AB3B300C337DD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F1161582191AB3B300C337DD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F1161583191AB3B300C337DD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F1161587191AB3B300C337DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F1161588191AB3B300C337DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F116158A191AB3B300C337DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iGlookup/iGlookup-Prefix.pch";
+				INFOPLIST_FILE = "iGlookup/iGlookup-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F116158B191AB3B300C337DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iGlookup/iGlookup-Prefix.pch";
+				INFOPLIST_FILE = "iGlookup/iGlookup-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		F116158D191AB3B300C337DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iGlookup.app/iGlookup";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iGlookup/iGlookup-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "iGlookupTests/iGlookupTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		F116158E191AB3B300C337DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iGlookup.app/iGlookup";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iGlookup/iGlookup-Prefix.pch";
+				INFOPLIST_FILE = "iGlookupTests/iGlookupTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F116154F191AB3B300C337DD /* Build configuration list for PBXProject "iGlookup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1161587191AB3B300C337DD /* Debug */,
+				F1161588191AB3B300C337DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F1161589191AB3B300C337DD /* Build configuration list for PBXNativeTarget "iGlookup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F116158A191AB3B300C337DD /* Debug */,
+				F116158B191AB3B300C337DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F116158C191AB3B300C337DD /* Build configuration list for PBXNativeTarget "iGlookupTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F116158D191AB3B300C337DD /* Debug */,
+				F116158E191AB3B300C337DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F116154C191AB3B300C337DD /* Project object */;
+}

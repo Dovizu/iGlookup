@@ -14,7 +14,7 @@
 		F1161564191AB3B300C337DD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F1161563191AB3B300C337DD /* main.m */; };
 		F1161568191AB3B300C337DD /* SLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F1161567191AB3B300C337DD /* SLAppDelegate.m */; };
 		F116156B191AB3B300C337DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1161569191AB3B300C337DD /* Main.storyboard */; };
-		F116156E191AB3B300C337DD /* SLMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F116156D191AB3B300C337DD /* SLMasterViewController.m */; };
+		F116156E191AB3B300C337DD /* SLAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F116156D191AB3B300C337DD /* SLAccountViewController.m */; };
 		F1161571191AB3B300C337DD /* SLDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1161570191AB3B300C337DD /* SLDetailViewController.m */; };
 		F1161573191AB3B300C337DD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1161572191AB3B300C337DD /* Images.xcassets */; };
 		F116157A191AB3B300C337DD /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1161579191AB3B300C337DD /* XCTest.framework */; };
@@ -46,8 +46,8 @@
 		F1161566191AB3B300C337DD /* SLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLAppDelegate.h; sourceTree = "<group>"; };
 		F1161567191AB3B300C337DD /* SLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLAppDelegate.m; sourceTree = "<group>"; };
 		F116156A191AB3B300C337DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F116156C191AB3B300C337DD /* SLMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLMasterViewController.h; sourceTree = "<group>"; };
-		F116156D191AB3B300C337DD /* SLMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLMasterViewController.m; sourceTree = "<group>"; };
+		F116156C191AB3B300C337DD /* SLAccountViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLAccountViewController.h; sourceTree = "<group>"; };
+		F116156D191AB3B300C337DD /* SLAccountViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLAccountViewController.m; sourceTree = "<group>"; };
 		F116156F191AB3B300C337DD /* SLDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLDetailViewController.h; sourceTree = "<group>"; };
 		F1161570191AB3B300C337DD /* SLDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLDetailViewController.m; sourceTree = "<group>"; };
 		F1161572191AB3B300C337DD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -118,8 +118,8 @@
 				F1161566191AB3B300C337DD /* SLAppDelegate.h */,
 				F1161567191AB3B300C337DD /* SLAppDelegate.m */,
 				F1161569191AB3B300C337DD /* Main.storyboard */,
-				F116156C191AB3B300C337DD /* SLMasterViewController.h */,
-				F116156D191AB3B300C337DD /* SLMasterViewController.m */,
+				F116156C191AB3B300C337DD /* SLAccountViewController.h */,
+				F116156D191AB3B300C337DD /* SLAccountViewController.m */,
 				F116156F191AB3B300C337DD /* SLDetailViewController.h */,
 				F1161570191AB3B300C337DD /* SLDetailViewController.m */,
 				F1161572191AB3B300C337DD /* Images.xcassets */,
@@ -256,7 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1161571191AB3B300C337DD /* SLDetailViewController.m in Sources */,
-				F116156E191AB3B300C337DD /* SLMasterViewController.m in Sources */,
+				F116156E191AB3B300C337DD /* SLAccountViewController.m in Sources */,
 				F1161564191AB3B300C337DD /* main.m in Sources */,
 				F1161568191AB3B300C337DD /* SLAppDelegate.m in Sources */,
 			);

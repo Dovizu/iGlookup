@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SLMasterViewController : UITableViewController
+@interface SLAccountViewController : UITableViewController
 
 @end

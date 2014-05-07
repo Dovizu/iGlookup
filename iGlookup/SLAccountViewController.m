@@ -6,16 +6,16 @@
 //  Copyright (c) 2014 Scouting Legion. All rights reserved.
 //
 
-#import "SLMasterViewController.h"
+#import "SLAccountViewController.h"
 
 #import "SLDetailViewController.h"
 
-@interface SLMasterViewController () {
+@interface SLAccountViewController () {
     NSMutableArray *_objects;
 }
 @end
 
-@implementation SLMasterViewController
+@implementation SLAccountViewController
 
 - (void)awakeFromNib
 {

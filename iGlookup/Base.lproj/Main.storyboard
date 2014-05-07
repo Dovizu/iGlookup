@@ -50,7 +50,7 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <segue destination="lSL-cr-a37" kind="push" id="gGl-Pm-72A"/>
+                                    <segue destination="lSL-cr-a37" kind="push" identifier="showAssignment" id="gGl-Pm-72A"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -130,7 +130,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="Ah7-4n-0Wa" kind="push" id="XR7-9h-g2f"/>
+                                    <segue destination="Ah7-4n-0Wa" kind="push" identifier="showDetail" id="XR7-9h-g2f"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

@@ -10,4 +10,7 @@
 
 @interface SLAssignmentViewController : UITableViewController
 
+@property (strong, nonatomic) id assignmentItem;
+
+@property (weak, nonatomic) IBOutlet UILabel *assignmentDescriptionLabel;
 @end

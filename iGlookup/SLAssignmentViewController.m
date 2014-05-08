@@ -30,7 +30,8 @@
 //Work before the view appears
 - (void)viewWillAppear:(BOOL)animated
 {
-    [self.navigationController setToolbarHidden:YES animated:animated];
+    [super viewWillAppear:animated];
+    [self.navigationController setToolbarHidden:YES animated:YES];
 }
 
 //Work after the view appears
@@ -39,14 +40,13 @@
     [super viewDidLoad];
     
     // Uncomment the following line to preserve selection between presentations.
-//    self.clearsSelectionOnViewWillAppear = NO;
+//    self.clearsSelectionOnViewWillAppear = YES;
 
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
 //    self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
 //    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
 //    self.navigationItem.rightBarButtonItem = addButton;
-    
     
     [self configureView];
 }
@@ -90,10 +90,13 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Ass" forIndexPath:indexPath];
+    SLAssignmentTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Ass" forIndexPath:indexPath];
     
     NSDate *object = _objects[indexPath.row];
-    cell.textLabel.text = [object description];
+    
+    cell.title.text = [[object description] uppercaseString];
+    cell.score.text = @"10/10";
+    
     return cell;
 }
 
@@ -113,6 +116,15 @@
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
     }
 }
+
+
+
+- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    SLAssignmentTableViewCell *cell = (SLAssignmentTableViewCell*)[tableView cellForRowAtIndexPath:indexPath];
+    [cell configureView];
+}
+
 
 /*
 // Override to support rearranging the table view.
@@ -160,7 +172,7 @@
     // Update the user interface for the detail item.
     
     if (self.assignmentItem) {
-        self.assignmentDescriptionLabel.text = [self.assignmentItem description];
+//        self.assignmentDescriptionLabel.text = [self.assignmentItem description];
     }
     self.navigationItem.title = [_assignmentItem description];
     

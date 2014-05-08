@@ -30,6 +30,8 @@
 
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
+    
+    [self prepareTestContent];
 }
 
 - (void)didReceiveMemoryWarning
@@ -117,5 +119,12 @@
     }
 }
 
+- (void)prepareTestContent {
+    NSInteger num = 3; //accounts
+    while (num!=0) {
+        [self insertNewObject:nil];
+        num--;
+    }
+}
 
 @end

@@ -27,18 +27,26 @@
     return self;
 }
 
+//Work before the view appears
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self.navigationController setToolbarHidden:YES animated:animated];
+}
+
+//Work after the view appears
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
     // Uncomment the following line to preserve selection between presentations.
-    self.clearsSelectionOnViewWillAppear = NO;
-    
+//    self.clearsSelectionOnViewWillAppear = NO;
+
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    self.navigationItem.rightBarButtonItem = self.editButtonItem;
+//    self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-    self.navigationItem.rightBarButtonItem = addButton;
+//    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
+//    self.navigationItem.rightBarButtonItem = addButton;
+    
     
     [self configureView];
 }
@@ -48,6 +56,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 - (void)insertNewObject:(id)sender
 {
@@ -65,6 +74,7 @@
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
     [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
+ 
 
 #pragma mark - Table view data source
 
@@ -153,7 +163,17 @@
         self.assignmentDescriptionLabel.text = [self.assignmentItem description];
     }
     self.navigationItem.title = [_assignmentItem description];
+    
+    [self prepareTestContent];
 }
 
+- (void)prepareTestContent
+{
+    NSInteger num = 10;
+    while (num!=0) {
+        num--;
+        [self insertNewObject:nil];
+    }
+}
 
 @end

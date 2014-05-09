@@ -16,7 +16,7 @@
 		F1161568191AB3B300C337DD /* SLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F1161567191AB3B300C337DD /* SLAppDelegate.m */; };
 		F116156B191AB3B300C337DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1161569191AB3B300C337DD /* Main.storyboard */; };
 		F116156E191AB3B300C337DD /* SLAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F116156D191AB3B300C337DD /* SLAccountViewController.m */; };
-		F1161571191AB3B300C337DD /* SLDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1161570191AB3B300C337DD /* SLDetailViewController.m */; };
+		F1161571191AB3B300C337DD /* SLDetailViewControllerContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = F1161570191AB3B300C337DD /* SLDetailViewControllerContainer.m */; };
 		F1161573191AB3B300C337DD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1161572191AB3B300C337DD /* Images.xcassets */; };
 		F116157A191AB3B300C337DD /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1161579191AB3B300C337DD /* XCTest.framework */; };
 		F116157B191AB3B300C337DD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1161557191AB3B300C337DD /* Foundation.framework */; };
@@ -26,6 +26,7 @@
 		F1161591191AD94A00C337DD /* SLAssignmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1161590191AD94A00C337DD /* SLAssignmentViewController.m */; };
 		F116159A191C137200C337DD /* SLAssignmentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F1161599191C137200C337DD /* SLAssignmentTableViewCell.m */; };
 		F116159E191C576E00C337DD /* SLAssignmentTableViewCellLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F116159D191C576E00C337DD /* SLAssignmentTableViewCellLabel.m */; };
+		F1650F1E191C6FC0006F3260 /* SLDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1650F1D191C6FC0006F3260 /* SLDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,8 +55,8 @@
 		F116156A191AB3B300C337DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F116156C191AB3B300C337DD /* SLAccountViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLAccountViewController.h; sourceTree = "<group>"; };
 		F116156D191AB3B300C337DD /* SLAccountViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLAccountViewController.m; sourceTree = "<group>"; };
-		F116156F191AB3B300C337DD /* SLDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLDetailViewController.h; sourceTree = "<group>"; };
-		F1161570191AB3B300C337DD /* SLDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLDetailViewController.m; sourceTree = "<group>"; };
+		F116156F191AB3B300C337DD /* SLDetailViewControllerContainer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLDetailViewControllerContainer.h; sourceTree = "<group>"; };
+		F1161570191AB3B300C337DD /* SLDetailViewControllerContainer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLDetailViewControllerContainer.m; sourceTree = "<group>"; };
 		F1161572191AB3B300C337DD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F1161578191AB3B300C337DD /* iGlookupTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iGlookupTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1161579191AB3B300C337DD /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -68,6 +69,8 @@
 		F1161599191C137200C337DD /* SLAssignmentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLAssignmentTableViewCell.m; sourceTree = "<group>"; };
 		F116159C191C576E00C337DD /* SLAssignmentTableViewCellLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLAssignmentTableViewCellLabel.h; sourceTree = "<group>"; };
 		F116159D191C576E00C337DD /* SLAssignmentTableViewCellLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLAssignmentTableViewCellLabel.m; sourceTree = "<group>"; };
+		F1650F1C191C6FC0006F3260 /* SLDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLDetailViewController.h; sourceTree = "<group>"; };
+		F1650F1D191C6FC0006F3260 /* SLDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,13 +136,10 @@
 				F1161566191AB3B300C337DD /* SLAppDelegate.h */,
 				F1161567191AB3B300C337DD /* SLAppDelegate.m */,
 				F1161569191AB3B300C337DD /* Main.storyboard */,
-				F116158F191AD94A00C337DD /* SLAssignmentViewController.h */,
-				F1161590191AD94A00C337DD /* SLAssignmentViewController.m */,
-				F116159B191C13C200C337DD /* Assignment View */,
 				F116156C191AB3B300C337DD /* SLAccountViewController.h */,
 				F116156D191AB3B300C337DD /* SLAccountViewController.m */,
-				F116156F191AB3B300C337DD /* SLDetailViewController.h */,
-				F1161570191AB3B300C337DD /* SLDetailViewController.m */,
+				F1650F1F191C6FD5006F3260 /* Detail View */,
+				F116159B191C13C200C337DD /* Assignment View */,
 				F1161572191AB3B300C337DD /* Images.xcassets */,
 				F116155E191AB3B300C337DD /* Supporting Files */,
 			);
@@ -178,12 +178,25 @@
 		F116159B191C13C200C337DD /* Assignment View */ = {
 			isa = PBXGroup;
 			children = (
+				F116158F191AD94A00C337DD /* SLAssignmentViewController.h */,
+				F1161590191AD94A00C337DD /* SLAssignmentViewController.m */,
 				F1161598191C137200C337DD /* SLAssignmentTableViewCell.h */,
 				F1161599191C137200C337DD /* SLAssignmentTableViewCell.m */,
 				F116159C191C576E00C337DD /* SLAssignmentTableViewCellLabel.h */,
 				F116159D191C576E00C337DD /* SLAssignmentTableViewCellLabel.m */,
 			);
 			name = "Assignment View";
+			sourceTree = "<group>";
+		};
+		F1650F1F191C6FD5006F3260 /* Detail View */ = {
+			isa = PBXGroup;
+			children = (
+				F1650F1C191C6FC0006F3260 /* SLDetailViewController.h */,
+				F1650F1D191C6FC0006F3260 /* SLDetailViewController.m */,
+				F116156F191AB3B300C337DD /* SLDetailViewControllerContainer.h */,
+				F1161570191AB3B300C337DD /* SLDetailViewControllerContainer.m */,
+			);
+			name = "Detail View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,10 +332,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1161571191AB3B300C337DD /* SLDetailViewController.m in Sources */,
+				F1161571191AB3B300C337DD /* SLDetailViewControllerContainer.m in Sources */,
 				F1161591191AD94A00C337DD /* SLAssignmentViewController.m in Sources */,
 				F116159E191C576E00C337DD /* SLAssignmentTableViewCellLabel.m in Sources */,
 				F116156E191AB3B300C337DD /* SLAccountViewController.m in Sources */,
+				F1650F1E191C6FC0006F3260 /* SLDetailViewController.m in Sources */,
 				F116159A191C137200C337DD /* SLAssignmentTableViewCell.m in Sources */,
 				F1161564191AB3B300C337DD /* main.m in Sources */,
 				F1161568191AB3B300C337DD /* SLAppDelegate.m in Sources */,

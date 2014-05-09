@@ -8,7 +8,7 @@
 
 #import "SLAssignmentViewController.h"
 
-#import "SLDetailViewController.h"
+#import "SLDetailViewControllerContainer.h"
 
 @interface SLAssignmentViewController () {
     NSMutableArray *_objects;
@@ -151,7 +151,7 @@
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         NSDate *object = _objects[indexPath.row];
-        [[segue destinationViewController] setDetailItem:object];
+        [[segue destinationViewController] setAssignment:object];
     }
 }
 
@@ -184,7 +184,7 @@
     NSInteger num = 10;
     while (num!=0) {
         num--;
-        [self insertNewObject:nil];
+        [self insertNewObject:nil]; //insert ten times
     }
 }
 

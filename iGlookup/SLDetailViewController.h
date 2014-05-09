@@ -10,6 +10,5 @@
 
 @interface SLDetailViewController : UITableViewController
 
-@property (weak, nonatomic) IBOutlet UIView *cardView;
-@property (weak, nonatomic) IBOutlet UITableViewCell *cardCell;
+
 @end

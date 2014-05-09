@@ -10,6 +10,11 @@
 
 @interface SLDetailViewController ()
 
+@property (weak, nonatomic) IBOutlet UIView *cardView;
+@property (weak, nonatomic) IBOutlet UITableViewCell *cardCell;
+@property (weak, nonatomic) IBOutlet UILabel *cardScore;
+@property (weak, nonatomic) IBOutlet UILabel *cardRank;
+
 @end
 
 @implementation SLDetailViewController
@@ -26,38 +31,29 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-
-//    self.cardView.frame = CGRectMake(self.cardView.frame.origin.x,
-//                                     self.cardView.frame.origin.y,
-//                                     400,
-//                                     self.cardView.frame.size.width);
-//    self.cardCell.frame = CGRectMake(self.cardCell.frame.origin.x,
-//                                     self.cardCell.frame.origin.y,
-//                                     400,
-//                                     self.cardCell.frame.size.width);
-//    [self.cardCell sizeToFit];
-    self.cardView.backgroundColor = [UIColor greenColor];
-
+    [self configureView];
 }
 
+/*
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if ([indexPath section]==0) {
-        return 120;
+        return 120; //card length
     }
     return [super tableView:tableView heightForRowAtIndexPath:indexPath];
 }
+ */
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)configureView
+{
+    self.cardScore.text = @"85/100";
+    self.cardRank.text = [NSString stringWithFormat:@"#%@ out of %@", [NSNumber numberWithInt:23], [NSNumber numberWithInt:534]];
 }
 
 #pragma mark - Table view data source

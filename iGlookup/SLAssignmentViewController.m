@@ -9,10 +9,13 @@
 #import "SLAssignmentViewController.h"
 
 #import "SLDetailViewControllerContainer.h"
+#import "SLDetailViewController.h"
 
 @interface SLAssignmentViewController () {
-    NSMutableArray *_objects;
+//    NSMutableArray *_objects;
 }
+@property (strong, nonatomic) SLAccount *account;
+
 -(void)configureView;
 @end
 
@@ -58,6 +61,7 @@
 }
 
 
+/*
 - (void)insertNewObject:(id)sender
 {
     if (!_objects) {
@@ -74,6 +78,7 @@
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
     [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
+ */
  
 
 #pragma mark - Table view data source
@@ -85,17 +90,17 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _objects.count;
+    return [_account.assignments count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     SLAssignmentTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Ass" forIndexPath:indexPath];
     
-    NSDate *object = _objects[indexPath.row];
+    SLAssignment *assignment = _account.assignments[indexPath.row];
     
-    cell.title.text = [[object description] uppercaseString];
-    cell.score.text = @"10/10";
+    cell.title.text = [assignment.name uppercaseString];
+    cell.score.text = assignment.grade;
     
     return cell;
 }
@@ -107,6 +112,7 @@
 }
 
 // Override to support editing the table view.
+/*
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
@@ -116,6 +122,7 @@
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
     }
 }
+ */
 
 #pragma mark - Table View Delegate
 
@@ -150,18 +157,21 @@
 {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSDate *object = _objects[indexPath.row];
-        [[segue destinationViewController] setAssignment:object];
+        SLAssignment *assignment = _account.assignments[indexPath.row];
+        [[segue destinationViewController] setAssignment:assignment];
+//        SLDetailViewController *detailVC = (SLDetailViewController*)([[segue destinationViewController] viewControllers][0]);
+//        [detailVC setAssignment:assignment];
     }
 }
 
 #pragma mark - Managing the assignment item
 
-- (void)setAssignmentItem:(id)newAssignmentItem
+- (void)setAccount:(SLAccount *)account
 {
-    if (_assignmentItem != newAssignmentItem) {
-        _assignmentItem = newAssignmentItem;
-
+    if (_account != account) {
+        _account = account;
+        [_account openSession];
+        [_account updateAssignments];
         // Update the view.
         [self configureView];
     }
@@ -171,14 +181,15 @@
 {
     // Update the user interface for the detail item.
     
-    if (self.assignmentItem) {
+    if (self.account) {
 //        self.assignmentDescriptionLabel.text = [self.assignmentItem description];
     }
-    self.navigationItem.title = [_assignmentItem description];
+    self.navigationItem.title = _account.className;
     
-    [self prepareTestContent];
+//    [self prepareTestContent];
 }
 
+/*
 - (void)prepareTestContent
 {
     NSInteger num = 10;
@@ -187,5 +198,6 @@
         [self insertNewObject:nil]; //insert ten times
     }
 }
+ */
 
 @end

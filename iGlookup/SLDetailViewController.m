@@ -7,10 +7,11 @@
 //
 
 #import "SLDetailViewController.h"
+#import "SLAssignmentViewController.h"
 
 @interface SLDetailViewController ()
 
-@property UITableViewCell *prototypeCell;
+
 
 @property (weak, nonatomic) IBOutlet UIView *cardView;
 @property (weak, nonatomic) IBOutlet UITableViewCell *cardCell;
@@ -41,20 +42,20 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *text = @"Comment: The best way that I've found for dynamic height is to calculate the height beforehand and store it in a collection of some sort (probably an array.) Assuming the cell contains";
+//    NSString *text = @"Comment: The best way that I've found for dynamic height is to calculate the height beforehand and store it in a collection of some sort (probably an array.) Assuming the cell contains";
     
     if ([indexPath section]==1 && [indexPath row]==0) {
 
         UITableViewCell *cell = [self tableView:tableView cellForRowAtIndexPath:indexPath];
 
         cell.textLabel.font = [UIFont fontWithName:@"Helvetica Neue" size:[UIFont systemFontSize]];
-        cell.textLabel.text = text;
+        cell.textLabel.text = _assignment.comments;
         cell.textLabel.numberOfLines = 0;
         
         //calculate height
         UILabel *gettingSizeLabel = [[UILabel alloc] init];
         gettingSizeLabel.font = [UIFont fontWithName:@"Helvetica Neue" size:[UIFont systemFontSize]];
-        gettingSizeLabel.text = text;
+        gettingSizeLabel.text = _assignment.comments;
         gettingSizeLabel.numberOfLines = 0;
         CGSize expectedSize = [gettingSizeLabel sizeThatFits:CGSizeMake(self.tableView.frame.size.width, MAXFLOAT)];
 
@@ -71,12 +72,24 @@
 
 - (void)configureView
 {
-    self.cardScore.text = @"85/100";
-    self.cardRank.text = [NSString stringWithFormat:@"#%@ out of %@", [NSNumber numberWithInt:23], [NSNumber numberWithInt:534]];
+    self.cardScore.text = _assignment.grade;
+    [_assignment updateDistribution];
+    NSNumber *num = [_assignment.distribution.numInBin valueForKeyPath:@"@sum.self"];
+    self.cardRank.text = [NSString stringWithFormat:@"Rank: #%@ out of %@", [NSNumber numberWithInteger:_assignment.distribution.rank], num];
     self.readerCell.textLabel.text = @"Reader";
-    self.readerCell.detailTextLabel.text = @"cs61b-rl";
+    self.readerCell.detailTextLabel.text = _assignment.reader;
     self.weightCell.textLabel.text = @"Weight";
-    self.weightCell.detailTextLabel.text = @"1.0";
+    self.weightCell.detailTextLabel.text = _assignment.weight;
+}
+
+- (void)setAssignment:(SLAssignment *)assignment
+{
+    if (_assignment != assignment) {
+        _assignment = assignment;
+
+        // Update the view.
+        [self configureView];
+    }
 }
 
 #pragma mark - Table view data source

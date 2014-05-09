@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "SLAssignmentTableViewCell.h"
+#import "SLAccount.h"
+#import "SLAssignment.h"
 
 @interface SLAssignmentViewController : UITableViewController
 
-@property (strong, nonatomic) id assignmentItem;
+
 
 @end

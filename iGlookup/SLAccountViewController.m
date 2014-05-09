@@ -7,11 +7,10 @@
 //
 
 #import "SLAccountViewController.h"
-
-#import "SLAssignmentViewController.h"
+#import "SLAccountBook.h"
 
 @interface SLAccountViewController () {
-    NSMutableArray *_objects;
+    SLAccountBook *accountBook;
 }
 @end
 
@@ -25,6 +24,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    accountBook = [[SLAccountBook alloc] init];
 	// Do any additional setup after loading the view, typically from a nib.
 //    self.navigationItem.leftBarButtonItem = self.editButtonItem;
     [self setToolbarItems:[NSArray arrayWithObjects:self.editButtonItem, nil]];
@@ -32,7 +32,7 @@
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addAccount:)];
     self.navigationItem.rightBarButtonItem = addButton;
 
-    [self prepareTestContent];
+//    [self prepareTestContent];
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -47,6 +47,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+/*
 - (void)insertNewObject:(id)sender
 {
     if (!_objects) {
@@ -63,6 +64,7 @@
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
     [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
+ */
 
 - (void)addAccount:(id)sender
 {
@@ -72,6 +74,12 @@
 - (void)addAccountClassName:(NSString *)classname login:(NSString *)login andPassword:(NSString *)password
 {
     DebugLog(@"Account added with classname:%@, login:%@, and password:%@", classname,login,password);
+    if (accountBook) {
+        SLAccount *account = [[SLAccount alloc] initWithClassName:classname username:login];
+        [account setPassword:password];
+        [accountBook addAccount:account];
+    }
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table View
@@ -83,15 +91,15 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _objects.count;
+    return [accountBook.accounts count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
-    NSDate *object = _objects[indexPath.row];
-    cell.textLabel.text = [object description];
+    SLAccount *account = accountBook.accounts[indexPath.row];
+    cell.textLabel.text = account.className;
     return cell;
 }
 
@@ -104,8 +112,16 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [_objects removeObjectAtIndex:indexPath.row];
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+//        SLAccount *account = [tableView cellForRowAtIndexPath:indexPath];
+//        [_objects removeObjectAtIndex:indexPath.row];
+//        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+
+        UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+        for (SLAccount *acc in accountBook.accounts) {
+            if ([acc.className isEqualToString:cell.textLabel.text]) {
+                [accountBook removeAccount:acc];
+            }
+        }
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
     }
@@ -131,14 +147,17 @@
 {
     if ([[segue identifier] isEqualToString:@"showAssignment"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSDate *object = _objects[indexPath.row];
-        [[segue destinationViewController] setAssignmentItem:object];
+        SLAccount *account = accountBook.accounts[indexPath.row];
+//        [account openSession];
+        
+        [[segue destinationViewController] setAccount:account];
     }else if ([[segue identifier] isEqualToString:@"addAccountScene"]) {
         SLAddAccountViewController *addAccountVC = ([[segue destinationViewController] viewControllers][0]);
         [addAccountVC setDelegate:self];
     }
 }
 
+/*
 - (void)prepareTestContent {
     NSInteger num = 3; //accounts
     while (num!=0) {
@@ -146,5 +165,6 @@
         num--;
     }
 }
+ */
 
 @end

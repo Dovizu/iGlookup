@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "SLAssignment.h"
 @interface SLDetailViewController : UITableViewController
+@property (nonatomic, strong) SLAssignment *assignment;
 
+- (void)setAssignment:(SLAssignment *)assignment;
 
 @end

@@ -25,8 +25,11 @@
     [_currentAccount updateAssignments];
 }
 
--(void)addAccount:(SLAccount *)account
+- (void)addAccount:(SLAccount*) account
 {
+    if (!_accounts) {
+        _accounts = [[NSMutableArray alloc] init];
+    }
     [_accounts addObject:account];
 }
 

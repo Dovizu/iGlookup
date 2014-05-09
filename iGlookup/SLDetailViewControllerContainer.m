@@ -31,11 +31,13 @@
     // Update the user interface for the detail item.
 
     if (self.assignment) {
-//        self.detailDescriptionLabel.text = [NSString stringWithFormat:@"%@ Data Could Not Be Loaded", [self.assignment description]];
-    }else{
         
     }
-    
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    [[segue destinationViewController] setAssignment:_assignment];
 }
 
 //Work before the view appears

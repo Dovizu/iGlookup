@@ -24,7 +24,7 @@
     // Initialization code
 //    [self.score sizeToFit];
 //    [self needsUpdateConstraints];
-    [self configureView];
+//    [self configureView];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
@@ -34,15 +34,15 @@
     // Configure the view for the selected state
 }
 
-- (void)configureView
-{
-    CALayer *scoreLayer = self.score.layer;
-    scoreLayer.masksToBounds = YES;
-    scoreLayer.cornerRadius = 8;
-    scoreLayer.borderWidth = 1;
-    scoreLayer.borderColor = [[UIColor lightGrayColor] CGColor];
-    scoreLayer.backgroundColor = [[UIColor lightGrayColor] CGColor];
-    self.score.textColor = [UIColor whiteColor];
-}
+//- (void)configureView
+//{
+//    CALayer *scoreLayer = self.score.layer;
+//    scoreLayer.masksToBounds = YES;
+//    scoreLayer.cornerRadius = 8;
+//    scoreLayer.borderWidth = 1;
+//    scoreLayer.borderColor = [[UIColor lightGrayColor] CGColor];
+//    scoreLayer.backgroundColor = [[UIColor lightGrayColor] CGColor];
+//    self.score.textColor = [UIColor whiteColor];
+//}
 
 @end

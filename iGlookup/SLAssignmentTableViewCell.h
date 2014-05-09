@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SLAssignmentTableViewCellLabel.h"
 
 @interface SLAssignmentTableViewCell : UITableViewCell
 
 @property (nonatomic, weak) IBOutlet UILabel *title;
-@property (nonatomic, weak) IBOutlet UILabel *score;
+@property (nonatomic, weak) IBOutlet SLAssignmentTableViewCellLabel *score;
 
-- (void)configureView;
+//- (void)configureView;
 
 @end

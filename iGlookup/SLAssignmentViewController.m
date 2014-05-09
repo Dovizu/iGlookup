@@ -117,13 +117,13 @@
     }
 }
 
+#pragma mark - Table View Delegate
 
-
-- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    SLAssignmentTableViewCell *cell = (SLAssignmentTableViewCell*)[tableView cellForRowAtIndexPath:indexPath];
-    [cell configureView];
-}
+//- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    SLAssignmentTableViewCell *cell = (SLAssignmentTableViewCell*)[tableView cellForRowAtIndexPath:indexPath];
+//    [cell configureView];
+//}
 
 
 /*

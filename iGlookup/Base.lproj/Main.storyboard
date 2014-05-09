@@ -126,7 +126,7 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="right" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="89" translatesAutoresizingMaskIntoConstraints="NO" id="NqA-Mf-vuz" userLabel="Label - Score">
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="right" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="89" translatesAutoresizingMaskIntoConstraints="NO" id="NqA-Mf-vuz" userLabel="Label - Score" customClass="SLAssignmentTableViewCellLabel">
                                             <rect key="frame" x="178" y="11" width="89" height="20"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <constraints>

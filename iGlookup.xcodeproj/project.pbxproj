@@ -27,6 +27,7 @@
 		F116159A191C137200C337DD /* SLAssignmentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F1161599191C137200C337DD /* SLAssignmentTableViewCell.m */; };
 		F116159E191C576E00C337DD /* SLAssignmentTableViewCellLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F116159D191C576E00C337DD /* SLAssignmentTableViewCellLabel.m */; };
 		F11EC507191CC9A30061D3BC /* SLAddAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F11EC506191CC9A30061D3BC /* SLAddAccountViewController.m */; };
+		F11EC50D191CEDFA0061D3BC /* SLBarGraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F11EC50C191CEDFA0061D3BC /* SLBarGraphViewController.m */; };
 		F1650F1E191C6FC0006F3260 /* SLDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1650F1D191C6FC0006F3260 /* SLDetailViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +73,8 @@
 		F116159D191C576E00C337DD /* SLAssignmentTableViewCellLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLAssignmentTableViewCellLabel.m; sourceTree = "<group>"; };
 		F11EC505191CC9A30061D3BC /* SLAddAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLAddAccountViewController.h; sourceTree = "<group>"; };
 		F11EC506191CC9A30061D3BC /* SLAddAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLAddAccountViewController.m; sourceTree = "<group>"; };
+		F11EC50B191CEDFA0061D3BC /* SLBarGraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLBarGraphViewController.h; sourceTree = "<group>"; };
+		F11EC50C191CEDFA0061D3BC /* SLBarGraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLBarGraphViewController.m; sourceTree = "<group>"; };
 		F1650F1C191C6FC0006F3260 /* SLDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLDetailViewController.h; sourceTree = "<group>"; };
 		F1650F1D191C6FC0006F3260 /* SLDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -208,6 +211,8 @@
 				F1650F1D191C6FC0006F3260 /* SLDetailViewController.m */,
 				F116156F191AB3B300C337DD /* SLDetailViewControllerContainer.h */,
 				F1161570191AB3B300C337DD /* SLDetailViewControllerContainer.m */,
+				F11EC50B191CEDFA0061D3BC /* SLBarGraphViewController.h */,
+				F11EC50C191CEDFA0061D3BC /* SLBarGraphViewController.m */,
 			);
 			name = "Detail View";
 			sourceTree = "<group>";
@@ -347,6 +352,7 @@
 			files = (
 				F1161571191AB3B300C337DD /* SLDetailViewControllerContainer.m in Sources */,
 				F1161591191AD94A00C337DD /* SLAssignmentViewController.m in Sources */,
+				F11EC50D191CEDFA0061D3BC /* SLBarGraphViewController.m in Sources */,
 				F116159E191C576E00C337DD /* SLAssignmentTableViewCellLabel.m in Sources */,
 				F11EC507191CC9A30061D3BC /* SLAddAccountViewController.m in Sources */,
 				F116156E191AB3B300C337DD /* SLAccountViewController.m in Sources */,

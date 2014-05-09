@@ -328,12 +328,28 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Distribution" id="CEj-pU-Eas" userLabel="Distribution Section">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="pKd-Bx-Zbk" userLabel="Distribution View">
-                                        <rect key="frame" x="0.0" y="444" width="320" height="44"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="500" id="pKd-Bx-Zbk" userLabel="Distribution View">
+                                        <rect key="frame" x="0.0" y="444" width="320" height="500"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pKd-Bx-Zbk" id="nSt-dE-her">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="499"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <containerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SkM-ir-Ocb">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="499"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                    <connections>
+                                                        <segue destination="6Sd-Jk-ZWa" kind="embed" id="vds-ZJ-sbm"/>
+                                                    </connections>
+                                                </containerView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="SkM-ir-Ocb" firstAttribute="leading" secondItem="nSt-dE-her" secondAttribute="leading" id="0lw-OV-RMk"/>
+                                                <constraint firstAttribute="trailing" secondItem="SkM-ir-Ocb" secondAttribute="trailing" id="Chh-SO-EfS"/>
+                                                <constraint firstAttribute="bottom" secondItem="SkM-ir-Ocb" secondAttribute="bottom" id="UAQ-tk-T8s"/>
+                                                <constraint firstItem="SkM-ir-Ocb" firstAttribute="top" secondItem="nSt-dE-her" secondAttribute="top" id="fQ9-YE-P3W"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -352,6 +368,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1BS-a2-Eht" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1842" y="64"/>
+        </scene>
+        <!--Distribution Graph-->
+        <scene sceneID="n5j-z9-Tf1">
+            <objects>
+                <viewController id="6Sd-Jk-ZWa" userLabel="Distribution Graph" customClass="SLBarGraphViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="frp-5C-1Kp"/>
+                        <viewControllerLayoutGuide type="bottom" id="Lq0-Gj-I89"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="s3v-Bq-XG6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="499"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hYq-Jc-qF8" customClass="CPTGraphHostingView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="499"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="hYq-Jc-qF8" secondAttribute="trailing" id="Fsd-eb-fnE"/>
+                            <constraint firstItem="Lq0-Gj-I89" firstAttribute="top" secondItem="hYq-Jc-qF8" secondAttribute="bottom" id="WOF-Ka-WQq"/>
+                            <constraint firstItem="hYq-Jc-qF8" firstAttribute="top" secondItem="frp-5C-1Kp" secondAttribute="bottom" id="XpR-bO-THG"/>
+                            <constraint firstItem="hYq-Jc-qF8" firstAttribute="leading" secondItem="s3v-Bq-XG6" secondAttribute="leading" id="mG5-DX-6kc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="hostView" destination="hYq-Jc-qF8" id="CVc-in-w0O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="93w-Ic-fsw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2350" y="564"/>
         </scene>
         <!--Assignment View-->
         <scene sceneID="0Is-cq-Jca">

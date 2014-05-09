@@ -138,7 +138,12 @@
 -(NSMutableDictionary *)accountToDictionary
 {
     NSMutableDictionary *outDictionary = [[NSMutableDictionary alloc] init];
-    [outDictionary setObject:_assignments forKey:@"assignments"];
+    
+    NSMutableArray *assignmentsArray = [NSMutableArray arrayWithCapacity:[_assignments count]];
+    for (NSInteger i = 0; i < [_assignments count]; ++i) {
+        assignmentsArray[i] = [_assignments[i] assignmentToDictionary];
+    }
+    [outDictionary setObject:assignmentsArray forKey:@"assignments"];
     [outDictionary setObject:_className forKey:@"className"];
     [outDictionary setObject:_username forKey:@"username"];
     return outDictionary;

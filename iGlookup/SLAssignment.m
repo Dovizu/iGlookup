@@ -7,7 +7,7 @@
 //
 
 #import "SLAssignment.h"
-#import "SLAccount.h"
+
 
 @implementation SLAssignment
 
@@ -44,7 +44,7 @@
             self.type = TotalAssignment;
         }
         self.account = [dictionary objectForKey:@"account"];
-        self.distribution = [dictionary objectForKey:@"distribution"];
+        self.distribution = [[SLDistribution alloc] initFromDictionary:[dictionary objectForKey:@"distribution"]];
     }
     
     return self;
@@ -110,7 +110,7 @@
         [outDictionary setObject:@"TotalAssignment" forKey:@"type"];
     }
     [outDictionary setObject:_account forKey:@"account"];
-    [outDictionary setObject:_distribution forKey:@"distribution"];
+    [outDictionary setObject:[_distribution distributionToDictionary] forKey:@"distribution"];
     return outDictionary;
 }
 

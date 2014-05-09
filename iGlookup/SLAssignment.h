@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "SLDistribution.h"
+#import "SLAccount.h"
+
 @class SLAccount;
 
 typedef enum {

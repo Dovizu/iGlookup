@@ -25,8 +25,7 @@
 @property NSMutableArray *numInBin;
 
 - (id)initFromDictionary:(NSMutableDictionary *)dictionary;
-
--(NSMutableDictionary *)distributionToDictionary;
+- (NSMutableDictionary *)distributionToDictionary;
 
 
 @end

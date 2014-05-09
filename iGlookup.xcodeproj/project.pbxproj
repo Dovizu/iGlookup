@@ -26,6 +26,7 @@
 		F1161591191AD94A00C337DD /* SLAssignmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1161590191AD94A00C337DD /* SLAssignmentViewController.m */; };
 		F116159A191C137200C337DD /* SLAssignmentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F1161599191C137200C337DD /* SLAssignmentTableViewCell.m */; };
 		F116159E191C576E00C337DD /* SLAssignmentTableViewCellLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F116159D191C576E00C337DD /* SLAssignmentTableViewCellLabel.m */; };
+		F11EC501191CA0890061D3BC /* PrototypeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F11EC500191CA0890061D3BC /* PrototypeCell.xib */; };
 		F1650F1E191C6FC0006F3260 /* SLDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1650F1D191C6FC0006F3260 /* SLDetailViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +70,7 @@
 		F1161599191C137200C337DD /* SLAssignmentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLAssignmentTableViewCell.m; sourceTree = "<group>"; };
 		F116159C191C576E00C337DD /* SLAssignmentTableViewCellLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLAssignmentTableViewCellLabel.h; sourceTree = "<group>"; };
 		F116159D191C576E00C337DD /* SLAssignmentTableViewCellLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLAssignmentTableViewCellLabel.m; sourceTree = "<group>"; };
+		F11EC500191CA0890061D3BC /* PrototypeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PrototypeCell.xib; sourceTree = "<group>"; };
 		F1650F1C191C6FC0006F3260 /* SLDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLDetailViewController.h; sourceTree = "<group>"; };
 		F1650F1D191C6FC0006F3260 /* SLDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -195,6 +197,7 @@
 				F1650F1D191C6FC0006F3260 /* SLDetailViewController.m */,
 				F116156F191AB3B300C337DD /* SLDetailViewControllerContainer.h */,
 				F1161570191AB3B300C337DD /* SLDetailViewControllerContainer.m */,
+				F11EC500191CA0890061D3BC /* PrototypeCell.xib */,
 			);
 			name = "Detail View";
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F11EC501191CA0890061D3BC /* PrototypeCell.xib in Resources */,
 				F1161573191AB3B300C337DD /* Images.xcassets in Resources */,
 				F1161562191AB3B300C337DD /* InfoPlist.strings in Resources */,
 				F116156B191AB3B300C337DD /* Main.storyboard in Resources */,

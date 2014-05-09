@@ -10,6 +10,8 @@
 
 @interface SLDetailViewController ()
 
+@property UITableViewCell *prototypeCell;
+
 @property (weak, nonatomic) IBOutlet UIView *cardView;
 @property (weak, nonatomic) IBOutlet UITableViewCell *cardCell;
 @property (weak, nonatomic) IBOutlet UILabel *cardScore;
@@ -32,17 +34,36 @@
 {
     [super viewDidLoad];
     [self configureView];
+    
+    NSString *identifier = @"PrototypeCellIdentifier";
+    [self.tableView registerNib:[UINib nibWithNibName:@"PrototypeCell" bundle:nil] forCellReuseIdentifier:identifier];
+    self.prototypeCell = [self.tableView dequeueReusableCellWithIdentifier:identifier];
 }
 
-/*
+
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if ([indexPath section]==0) {
-        return 120; //card length
+    NSString *text = @"Comment: The best way that I've found for dynamic height is to calculate the height beforehand and store it in a collection of some sort (probably an array.) Assuming the cell contains";
+    
+    if ([indexPath section]==1 && [indexPath row]==0) {
+
+        UITableViewCell *cell = [self tableView:tableView cellForRowAtIndexPath:indexPath];
+
+        cell.textLabel.font = [UIFont fontWithName:@"Helvetica Neue" size:[UIFont systemFontSize]];
+        cell.textLabel.text = text;
+        cell.textLabel.numberOfLines = 0;
+        
+        //calculate height
+        UILabel *gettingSizeLabel = [[UILabel alloc] init];
+        gettingSizeLabel.font = [UIFont fontWithName:@"Helvetica Neue" size:[UIFont systemFontSize]];
+        gettingSizeLabel.text = text;
+        gettingSizeLabel.numberOfLines = 0;
+        CGSize expectedSize = [gettingSizeLabel sizeThatFits:CGSizeMake(self.tableView.frame.size.width, MAXFLOAT)];
+
+        return expectedSize.height + 40;
     }
     return [super tableView:tableView heightForRowAtIndexPath:indexPath];
 }
- */
 
 - (void)didReceiveMemoryWarning
 {

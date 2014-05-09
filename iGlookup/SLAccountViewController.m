@@ -29,7 +29,7 @@
 //    self.navigationItem.leftBarButtonItem = self.editButtonItem;
     [self setToolbarItems:[NSArray arrayWithObjects:self.editButtonItem, nil]];
     
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addAccount:)];
     self.navigationItem.rightBarButtonItem = addButton;
 
     [self prepareTestContent];
@@ -61,6 +61,11 @@
     [_objects insertObject:s atIndex:0];
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
     [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+}
+
+- (void)addAccount:(id)sender
+{
+    [self performSegueWithIdentifier:@"addAccountScene" sender:sender];
 }
 
 #pragma mark - Table View

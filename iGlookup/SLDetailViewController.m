@@ -16,6 +16,8 @@
 @property (weak, nonatomic) IBOutlet UITableViewCell *cardCell;
 @property (weak, nonatomic) IBOutlet UILabel *cardScore;
 @property (weak, nonatomic) IBOutlet UILabel *cardRank;
+@property (weak, nonatomic) IBOutlet UITableViewCell *readerCell;
+@property (weak, nonatomic) IBOutlet UITableViewCell *weightCell;
 
 @end
 
@@ -34,10 +36,6 @@
 {
     [super viewDidLoad];
     [self configureView];
-    
-    NSString *identifier = @"PrototypeCellIdentifier";
-    [self.tableView registerNib:[UINib nibWithNibName:@"PrototypeCell" bundle:nil] forCellReuseIdentifier:identifier];
-    self.prototypeCell = [self.tableView dequeueReusableCellWithIdentifier:identifier];
 }
 
 
@@ -75,6 +73,10 @@
 {
     self.cardScore.text = @"85/100";
     self.cardRank.text = [NSString stringWithFormat:@"#%@ out of %@", [NSNumber numberWithInt:23], [NSNumber numberWithInt:534]];
+    self.readerCell.textLabel.text = @"Reader";
+    self.readerCell.detailTextLabel.text = @"cs61b-rl";
+    self.weightCell.textLabel.text = @"Weight";
+    self.weightCell.detailTextLabel.text = @"1.0";
 }
 
 #pragma mark - Table view data source

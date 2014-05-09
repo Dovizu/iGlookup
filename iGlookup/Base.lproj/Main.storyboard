@@ -200,26 +200,10 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Distribution" id="CEj-pU-Eas" userLabel="Distribution Section">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="pKd-Bx-Zbk">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="pKd-Bx-Zbk" userLabel="Distribution View">
                                         <rect key="frame" x="0.0" y="444" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pKd-Bx-Zbk" id="nSt-dE-her">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="ABs-An-qgp">
-                                        <rect key="frame" x="0.0" y="488" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ABs-An-qgp" id="PyY-5y-euY">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Z1X-dJ-clN">
-                                        <rect key="frame" x="0.0" y="532" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Z1X-dJ-clN" id="5d0-Do-Teh">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
@@ -233,6 +217,8 @@
                         <outlet property="cardRank" destination="5tM-r7-w2y" id="5FS-s5-4o0"/>
                         <outlet property="cardScore" destination="6yq-b8-lFb" id="bV1-3g-z5v"/>
                         <outlet property="cardView" destination="8IJ-Ze-GkP" id="qhV-iG-anM"/>
+                        <outlet property="readerCell" destination="qjX-Nh-INi" id="YAN-C5-qlE"/>
+                        <outlet property="weightCell" destination="lwo-RO-GF9" id="fKz-I0-xsD"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1BS-a2-Eht" userLabel="First Responder" sceneMemberID="firstResponder"/>

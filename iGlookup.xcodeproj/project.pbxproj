@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B2EAAE49F464946909513B0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A75E3377BC3B41A9A3233031 /* libPods.a */; };
 		DF1E4CF3E26B4CA4A49F0613 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A75E3377BC3B41A9A3233031 /* libPods.a */; };
 		F1161558191AB3B300C337DD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1161557191AB3B300C337DD /* Foundation.framework */; };
 		F116155A191AB3B300C337DD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1161559191AB3B300C337DD /* CoreGraphics.framework */; };
@@ -28,6 +29,12 @@
 		F116159E191C576E00C337DD /* SLAssignmentTableViewCellLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F116159D191C576E00C337DD /* SLAssignmentTableViewCellLabel.m */; };
 		F11EC507191CC9A30061D3BC /* SLAddAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F11EC506191CC9A30061D3BC /* SLAddAccountViewController.m */; };
 		F11EC50D191CEDFA0061D3BC /* SLBarGraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F11EC50C191CEDFA0061D3BC /* SLBarGraphViewController.m */; };
+		F11EC516191D11940061D3BC /* SLAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = F11EC50F191D11940061D3BC /* SLAccount.m */; };
+		F11EC517191D11940061D3BC /* SLAccountBook.m in Sources */ = {isa = PBXBuildFile; fileRef = F11EC511191D11940061D3BC /* SLAccountBook.m */; };
+		F11EC518191D11940061D3BC /* SLAssignment.m in Sources */ = {isa = PBXBuildFile; fileRef = F11EC513191D11940061D3BC /* SLAssignment.m */; };
+		F11EC519191D11940061D3BC /* SLDistribution.m in Sources */ = {isa = PBXBuildFile; fileRef = F11EC515191D11940061D3BC /* SLDistribution.m */; };
+		F11EC51D191D11B40061D3BC /* SLAccountTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F11EC51B191D11B40061D3BC /* SLAccountTest.m */; };
+		F11EC51E191D11B40061D3BC /* SLAssignmentTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F11EC51C191D11B40061D3BC /* SLAssignmentTest.m */; };
 		F1650F1E191C6FC0006F3260 /* SLDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1650F1D191C6FC0006F3260 /* SLDetailViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +82,16 @@
 		F11EC506191CC9A30061D3BC /* SLAddAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLAddAccountViewController.m; sourceTree = "<group>"; };
 		F11EC50B191CEDFA0061D3BC /* SLBarGraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLBarGraphViewController.h; sourceTree = "<group>"; };
 		F11EC50C191CEDFA0061D3BC /* SLBarGraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLBarGraphViewController.m; sourceTree = "<group>"; };
+		F11EC50E191D11940061D3BC /* SLAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLAccount.h; sourceTree = "<group>"; };
+		F11EC50F191D11940061D3BC /* SLAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLAccount.m; sourceTree = "<group>"; };
+		F11EC510191D11940061D3BC /* SLAccountBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLAccountBook.h; sourceTree = "<group>"; };
+		F11EC511191D11940061D3BC /* SLAccountBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLAccountBook.m; sourceTree = "<group>"; };
+		F11EC512191D11940061D3BC /* SLAssignment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLAssignment.h; sourceTree = "<group>"; };
+		F11EC513191D11940061D3BC /* SLAssignment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLAssignment.m; sourceTree = "<group>"; };
+		F11EC514191D11940061D3BC /* SLDistribution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLDistribution.h; sourceTree = "<group>"; };
+		F11EC515191D11940061D3BC /* SLDistribution.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLDistribution.m; sourceTree = "<group>"; };
+		F11EC51B191D11B40061D3BC /* SLAccountTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLAccountTest.m; sourceTree = "<group>"; };
+		F11EC51C191D11B40061D3BC /* SLAssignmentTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLAssignmentTest.m; sourceTree = "<group>"; };
 		F1650F1C191C6FC0006F3260 /* SLDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLDetailViewController.h; sourceTree = "<group>"; };
 		F1650F1D191C6FC0006F3260 /* SLDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,6 +115,7 @@
 				F116157A191AB3B300C337DD /* XCTest.framework in Frameworks */,
 				F116157C191AB3B300C337DD /* UIKit.framework in Frameworks */,
 				F116157B191AB3B300C337DD /* Foundation.framework in Frameworks */,
+				1B2EAAE49F464946909513B0 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +157,7 @@
 		F116155D191AB3B300C337DD /* iGlookup */ = {
 			isa = PBXGroup;
 			children = (
+				F11EC51A191D119E0061D3BC /* Backend */,
 				F1161566191AB3B300C337DD /* SLAppDelegate.h */,
 				F1161567191AB3B300C337DD /* SLAppDelegate.m */,
 				F1161569191AB3B300C337DD /* Main.storyboard */,
@@ -165,6 +184,8 @@
 		F116157F191AB3B300C337DD /* iGlookupTests */ = {
 			isa = PBXGroup;
 			children = (
+				F11EC51B191D11B40061D3BC /* SLAccountTest.m */,
+				F11EC51C191D11B40061D3BC /* SLAssignmentTest.m */,
 				F1161585191AB3B300C337DD /* iGlookupTests.m */,
 				F1161580191AB3B300C337DD /* Supporting Files */,
 			);
@@ -202,6 +223,21 @@
 				F11EC506191CC9A30061D3BC /* SLAddAccountViewController.m */,
 			);
 			name = "Account View";
+			sourceTree = "<group>";
+		};
+		F11EC51A191D119E0061D3BC /* Backend */ = {
+			isa = PBXGroup;
+			children = (
+				F11EC50E191D11940061D3BC /* SLAccount.h */,
+				F11EC50F191D11940061D3BC /* SLAccount.m */,
+				F11EC510191D11940061D3BC /* SLAccountBook.h */,
+				F11EC511191D11940061D3BC /* SLAccountBook.m */,
+				F11EC512191D11940061D3BC /* SLAssignment.h */,
+				F11EC513191D11940061D3BC /* SLAssignment.m */,
+				F11EC514191D11940061D3BC /* SLDistribution.h */,
+				F11EC515191D11940061D3BC /* SLDistribution.m */,
+			);
+			name = Backend;
 			sourceTree = "<group>";
 		};
 		F1650F1F191C6FD5006F3260 /* Detail View */ = {
@@ -243,9 +279,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F116158C191AB3B300C337DD /* Build configuration list for PBXNativeTarget "iGlookupTests" */;
 			buildPhases = (
+				F00A8DA059F14BBC98F7E873 /* Check Pods Manifest.lock */,
 				F1161574191AB3B300C337DD /* Sources */,
 				F1161575191AB3B300C337DD /* Frameworks */,
 				F1161576191AB3B300C337DD /* Resources */,
+				8B66B9D5F36F43D2AB960B1F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -313,6 +351,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		8B66B9D5F36F43D2AB960B1F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		CA83B8F33BAA4CF88CDCD12D /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -343,6 +396,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		F00A8DA059F14BBC98F7E873 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -351,7 +419,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1161571191AB3B300C337DD /* SLDetailViewControllerContainer.m in Sources */,
+				F11EC517191D11940061D3BC /* SLAccountBook.m in Sources */,
+				F11EC516191D11940061D3BC /* SLAccount.m in Sources */,
 				F1161591191AD94A00C337DD /* SLAssignmentViewController.m in Sources */,
+				F11EC519191D11940061D3BC /* SLDistribution.m in Sources */,
 				F11EC50D191CEDFA0061D3BC /* SLBarGraphViewController.m in Sources */,
 				F116159E191C576E00C337DD /* SLAssignmentTableViewCellLabel.m in Sources */,
 				F11EC507191CC9A30061D3BC /* SLAddAccountViewController.m in Sources */,
@@ -360,6 +431,7 @@
 				F116159A191C137200C337DD /* SLAssignmentTableViewCell.m in Sources */,
 				F1161564191AB3B300C337DD /* main.m in Sources */,
 				F1161568191AB3B300C337DD /* SLAppDelegate.m in Sources */,
+				F11EC518191D11940061D3BC /* SLAssignment.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,6 +439,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F11EC51E191D11B40061D3BC /* SLAssignmentTest.m in Sources */,
+				F11EC51D191D11B40061D3BC /* SLAccountTest.m in Sources */,
 				F1161586191AB3B300C337DD /* iGlookupTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -509,6 +583,7 @@
 		};
 		F116158D191AB3B300C337DD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6CEBA07CD6AE418D89056ACF /* Pods.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iGlookup.app/iGlookup";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -531,6 +606,7 @@
 		};
 		F116158E191AB3B300C337DD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6CEBA07CD6AE418D89056ACF /* Pods.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iGlookup.app/iGlookup";
 				FRAMEWORK_SEARCH_PATHS = (

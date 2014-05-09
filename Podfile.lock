@@ -1,13 +1,16 @@
 PODS:
   - CorePlot (1.5.1)
+  - FXKeychain (1.5)
   - NMSSH (2.1.0)
 
 DEPENDENCIES:
   - CorePlot (~> 1.5)
+  - FXKeychain (~> 1.5)
   - NMSSH
 
 SPEC CHECKSUMS:
   CorePlot: 7b55ddfce42eb93051c0f9edba927fd246831f6d
+  FXKeychain: 90cc7bf9ba005e4d099a113a194792e7983c5778
   NMSSH: ff9b46292e94df1bca588eadb164c917bff8c7d5
 
 COCOAPODS: 0.32.1

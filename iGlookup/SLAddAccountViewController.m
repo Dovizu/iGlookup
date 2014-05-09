@@ -58,12 +58,19 @@
 
 - (void)cancel:(id)sender
 {
-    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)save:(id)sender
 {
-    
+    [self dismissViewControllerAnimated:YES completion:nil];
+    if (![self.classField.text isEqualToString:@""] &&
+        ![self.loginField.text isEqualToString:@""] &&
+        ![self.passwordField.text isEqualToString:@""]) {
+        if ([self.delegate respondsToSelector:@selector(addAccountClassName:login:andPassword:)]) {
+            [self.delegate addAccountClassName:self.classField.text login:self.loginField.text andPassword:self.passwordField.text];
+        }
+    }
 }
 
 #pragma mark - Text Field Delegate

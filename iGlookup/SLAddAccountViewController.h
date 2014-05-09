@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SLAddAccountViewController : UITableViewController <UITextFieldDelegate>
+@protocol SLAddAccountDelegate <NSObject>
 
+- (void)addAccountClassName:(NSString *)classname login:(NSString *)login andPassword:(NSString *)password;
+
+@end
+
+@interface SLAddAccountViewController : UITableViewController <UITextFieldDelegate>
+@property (unsafe_unretained) id <SLAddAccountDelegate> delegate;
 @end

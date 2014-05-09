@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SLAddAccountViewController.h"
 
-@interface SLAccountViewController : UITableViewController
+@interface SLAccountViewController : UITableViewController <SLAddAccountDelegate>
 
 @end

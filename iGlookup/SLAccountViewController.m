@@ -37,6 +37,7 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
+    [super viewWillAppear:animated];
     [self.navigationController setToolbarHidden:NO animated:YES];
 }
 
@@ -66,6 +67,11 @@
 - (void)addAccount:(id)sender
 {
     [self performSegueWithIdentifier:@"addAccountScene" sender:sender];
+}
+
+- (void)addAccountClassName:(NSString *)classname login:(NSString *)login andPassword:(NSString *)password
+{
+    DebugLog(@"Account added with classname:%@, login:%@, and password:%@", classname,login,password);
 }
 
 #pragma mark - Table View
@@ -127,6 +133,9 @@
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         NSDate *object = _objects[indexPath.row];
         [[segue destinationViewController] setAssignmentItem:object];
+    }else if ([[segue identifier] isEqualToString:@"addAccountScene"]) {
+        SLAddAccountViewController *addAccountVC = ([[segue destinationViewController] viewControllers][0]);
+        [addAccountVC setDelegate:self];
     }
 }
 

@@ -45,6 +45,9 @@
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancel:)];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(save:)];
     
+    self.classField.tag = 0;
+    self.loginField.tag = 1;
+    self.passwordField.tag = 2;
 }
 
 - (void)didReceiveMemoryWarning
@@ -75,6 +78,18 @@
         [textField resignFirstResponder];
     }
     return NO;
+}
+
+-(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    if (textField.tag==0) {
+        textField.text = [textField.text stringByReplacingCharactersInRange:range withString:[string uppercaseString]];
+        return NO;
+    }else if (textField.tag==1) {
+        textField.text = [textField.text stringByReplacingCharactersInRange:range withString:[string lowercaseString]];
+        return NO;
+    }
+    return YES;
 }
 
 #pragma mark - Table view data source

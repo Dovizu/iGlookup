@@ -79,7 +79,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
-                            <tableViewSection headerTitle="Account Information" id="nzn-qs-B54" userLabel="Account Information">
+                            <tableViewSection headerTitle="Account Information" footerTitle="Your Password Will Be Securely Stored" id="nzn-qs-B54" userLabel="Account Information">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="8Lj-8U-gIi" userLabel="Class Name">
                                         <rect key="frame" x="0.0" y="119" width="320" height="44"/>

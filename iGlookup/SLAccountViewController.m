@@ -26,12 +26,18 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
-
+//    self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    [self setToolbarItems:[NSArray arrayWithObjects:self.editButtonItem, nil]];
+    
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
-    
+
     [self prepareTestContent];
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [self.navigationController setToolbarHidden:NO animated:YES];
 }
 
 - (void)didReceiveMemoryWarning

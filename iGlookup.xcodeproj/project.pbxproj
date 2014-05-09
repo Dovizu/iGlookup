@@ -136,10 +136,9 @@
 				F1161566191AB3B300C337DD /* SLAppDelegate.h */,
 				F1161567191AB3B300C337DD /* SLAppDelegate.m */,
 				F1161569191AB3B300C337DD /* Main.storyboard */,
-				F116156C191AB3B300C337DD /* SLAccountViewController.h */,
-				F116156D191AB3B300C337DD /* SLAccountViewController.m */,
-				F1650F1F191C6FD5006F3260 /* Detail View */,
+				F11EC504191CC1D60061D3BC /* Account View */,
 				F116159B191C13C200C337DD /* Assignment View */,
+				F1650F1F191C6FD5006F3260 /* Detail View */,
 				F1161572191AB3B300C337DD /* Images.xcassets */,
 				F116155E191AB3B300C337DD /* Supporting Files */,
 			);
@@ -186,6 +185,15 @@
 				F116159D191C576E00C337DD /* SLAssignmentTableViewCellLabel.m */,
 			);
 			name = "Assignment View";
+			sourceTree = "<group>";
+		};
+		F11EC504191CC1D60061D3BC /* Account View */ = {
+			isa = PBXGroup;
+			children = (
+				F116156C191AB3B300C337DD /* SLAccountViewController.h */,
+				F116156D191AB3B300C337DD /* SLAccountViewController.m */,
+			);
+			name = "Account View";
 			sourceTree = "<group>";
 		};
 		F1650F1F191C6FD5006F3260 /* Detail View */ = {

@@ -11,8 +11,6 @@
 
 @interface SLDetailViewController ()
 
-
-
 @property (weak, nonatomic) IBOutlet UIView *cardView;
 @property (weak, nonatomic) IBOutlet UITableViewCell *cardCell;
 @property (weak, nonatomic) IBOutlet UILabel *cardScore;
@@ -38,7 +36,6 @@
     [super viewDidLoad];
     [self configureView];
 }
-
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -91,6 +88,13 @@
         [self configureView];
     }
 }
+
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    [[segue destinationViewController] setDistribution:_assignment.distribution];
+}
+
 
 #pragma mark - Table view data source
 

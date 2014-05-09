@@ -7,6 +7,7 @@
 //
 
 #import "SLBarGraphViewController.h"
+#import "SLDistribution.h"
 
 @interface SLBarGraphViewController () {
     NSInteger bins;
@@ -14,6 +15,7 @@
     CGFloat barWidth;
 }
 
+@property (nonatomic, strong) SLDistribution *distribution;
 @property (nonatomic, strong) IBOutlet CPTGraphHostingView *hostView;
 @property (nonatomic, strong) CPTBarPlot *distPlot;
 @property (nonatomic, strong) CPTPlotSpaceAnnotation *annotation;
@@ -52,8 +54,8 @@
 
 #pragma mark - Chart behavior
 -(void)initPlot {
-    bins = 20;
-    maxValue = 8;
+    bins = [_distribution.numInBin count];
+    maxValue = [[_distribution.numInBin valueForKeyPath:@"@max.intValue"] floatValue];
     barWidth = 1.0f;
     self.hostView.allowPinchScaling = NO;
     [self configureGraph];
@@ -72,9 +74,9 @@
 	[graph applyTheme:[CPTTheme themeNamed:kCPTPlainWhiteTheme]];
     graph.plotAreaFrame.borderLineStyle = nil; //no graph border
 	graph.paddingBottom = 20.0f;
-	graph.paddingLeft  = 20.0f;
+	graph.paddingLeft  = 40.0f;
 	graph.paddingTop    = 20.0f;
-	graph.paddingRight  = 20.0f;
+	graph.paddingRight  = 40.0f;
     
 	// 3 - Set up styles
     /*
@@ -150,22 +152,8 @@
     axisSet.xAxis.majorTickLineStyle = axisLineStyle;
     axisSet.xAxis.majorTickLength = 1.0;
     axisSet.xAxis.tickDirection = CPTSignPositive;
-//    NSMutableSet *xLabels = [NSMutableSet setWithCapacity:bins];
-//	NSMutableSet *xLocations = [NSMutableSet setWithCapacity:bins];
 
-//    NSInteger i = 0;
-//	for ( in ) {
-//		CPTAxisLabel *label = [[CPTAxisLabel alloc] initWithText:date  textStyle:x.labelTextStyle];
-//		CGFloat location = i++;
-//		label.tickLocation = CPTDecimalFromCGFloat(location);
-//		label.offset = x.majorTickLength;
-//		if (label) {
-//			[xLabels addObject:label];
-//			[xLocations addObject:[NSNumber numberWithFloat:location]];
-//		}
-//	}
-//	x.axisLabels = xLabels;
-//	x.majorTickLocations = xLocations;
+
     
 	// 4 - Configure the y-axis
 	axisSet.yAxis.labelingPolicy = CPTAxisLabelingPolicyNone;
@@ -173,6 +161,25 @@
 //	axisSet.yAxis.titleTextStyle = axisTitleStyle;
 //	axisSet.yAxis.titleOffset = 5.0f;
 	axisSet.yAxis.axisLineStyle = axisLineStyle;
+    
+    NSArray *numInBin = _distribution.numInBin;
+    NSArray *upperBounds = _distribution.upperBounds;
+    NSMutableSet *yLabels = [NSMutableSet setWithCapacity:bins];
+    NSMutableSet *yLocations = [NSMutableSet setWithCapacity:bins];
+    NSInteger i = 0;
+    while (i<[numInBin count]) {
+        
+		CPTAxisLabel *label = [[CPTAxisLabel alloc] initWithText:[NSString stringWithFormat:@"%@",upperBounds[i]]  textStyle:axisSet.yAxis.labelTextStyle];
+		CGFloat location = i++;
+		label.tickLocation = CPTDecimalFromCGFloat(location);
+		label.offset = axisSet.yAxis.majorTickLength;
+        if (label) {
+            [yLabels addObject:label];
+            [yLocations addObject:[NSNumber numberWithFloat:location]];
+        }
+    }
+    axisSet.yAxis.axisLabels = yLabels;
+    axisSet.yAxis.majorTickLocations = yLocations;
 }
 
 #pragma mark - CPTPlotDataSource methods
@@ -184,7 +191,8 @@
 	if ((fieldEnum == CPTBarPlotFieldBarTip) && (index < bins)) {
 		if ([plot.identifier isEqual:@"Distribution"]) {
             srand(time(NULL));
-			return [NSNumber numberWithInteger:arc4random()%8];
+//			return [NSNumber numberWithInteger:(_distribution.numInBin)[index]];
+            return [_distribution.numInBin objectAtIndex:index];
 		}
 	}
 	return [NSDecimalNumber numberWithUnsignedInteger:index];
@@ -243,6 +251,20 @@
 	// 8 - Add the annotation
 	[plot.graph.plotAreaFrame.plotArea addAnnotation:self.annotation];
 }
+
+- (void)setDistribution:(SLDistribution *)distribution
+{
+    if (_distribution != distribution) {
+        _distribution = distribution;
+        //temporary fix
+        NSMutableArray *newUpperBounds = [NSMutableArray arrayWithArray:_distribution.upperBounds];
+        [newUpperBounds insertObject:[NSNumber numberWithInt:0] atIndex:0];
+        _distribution.upperBounds = newUpperBounds;
+        // Update the view.
+        [self initPlot];
+    }
+}
+
 /*
 #pragma mark - Navigation
 

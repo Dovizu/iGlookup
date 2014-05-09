@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SLAddAccountViewController : UITableViewController
+@interface SLAddAccountViewController : UITableViewController <UITextFieldDelegate>
 
 @end

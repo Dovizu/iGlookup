@@ -29,6 +29,10 @@
     self = [super init];
     
     if (self) {
+        NSMutableArray *assArray = [NSMutableArray arrayWithCapacity:[[dictionary objectForKey:@"assignments"] count]];
+        for (NSDictionary *ass in [dictionary objectForKey:@"assignments"]) {
+            [assArray insertObject:[[SLAssignment alloc] initFromDictionary:ass] atIndex:0];
+        }
         self.assignments = [dictionary objectForKey:@"assignments"];
         self.className = [dictionary objectForKey:@"className"];
         self.username = [dictionary objectForKey:@"username"];

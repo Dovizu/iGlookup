@@ -10,6 +10,28 @@
 
 @implementation SLAccountBook
 
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        NSString *applicationKey = @"SL-iGlookup";
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        NSDictionary *settings = [defaults objectForKey:applicationKey];
+        if (!settings) {
+            //first time boot
+            [defaults setObject:@{} forKey:applicationKey];
+        }else{
+            NSArray *listAccounts = [settings objectForKey:@"Accounts"];
+            if (listAccounts) {
+                for (NSDictionary *account in listAccounts) {
+                    [self addAccount:[[SLAccount alloc] initFromDictionary:account]];
+                }
+            }
+        }
+    }
+    return self;
+}
+
 -(id)initFromDictionary:(NSMutableDictionary *)dictionary
 {
     self = [super init];

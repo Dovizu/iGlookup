@@ -71,10 +71,12 @@
 	self.hostView.hostedGraph = graph;
     
 	// 2 - Configure the graph
+    
 	[graph applyTheme:[CPTTheme themeNamed:kCPTPlainWhiteTheme]];
     graph.plotAreaFrame.borderLineStyle = nil; //no graph border
 	graph.paddingBottom = 20.0f;
-	graph.paddingLeft  = 40.0f;
+    int numDigits = (int)[[_distribution.maximum stringValue] length];
+	graph.paddingLeft  = numDigits * 5 + 35.0f;
 	graph.paddingTop    = 20.0f;
 	graph.paddingRight  = 40.0f;
     
@@ -107,15 +109,15 @@
 
 -(void)configurePlots {
 	// 1 - Set up plot
-	self.distPlot = [CPTBarPlot tubularBarPlotWithColor:[CPTColor darkGrayColor] horizontalBars:YES]; //gives horizontal graph
+	self.distPlot = [CPTBarPlot tubularBarPlotWithColor:[CPTColor blueColor] horizontalBars:YES]; //gives horizontal graph
     [self.distPlot setBarCornerRadius:0]; //no rounded bars
-    self.distPlot.fill = [CPTFill fillWithColor:[CPTColor darkGrayColor]]; //no gradient
+    self.distPlot.fill = [CPTFill fillWithColor:[CPTColor blueColor]]; //no gradient
 	self.distPlot.identifier = @"Distribution";
 
 	// 2 - Set up line style
 	CPTMutableLineStyle *barLineStyle = [[CPTMutableLineStyle alloc] init];
 	barLineStyle.lineColor = [CPTColor whiteColor]; //separation between bars
-	barLineStyle.lineWidth = 1.0;
+	barLineStyle.lineWidth = 2.0;
     
 	// 3 - Add plots to graph
 	CPTGraph *graph = self.hostView.hostedGraph;
@@ -154,8 +156,9 @@
     axisSet.xAxis.tickDirection = CPTSignPositive;
 
 
-    
+     
 	// 4 - Configure the y-axis
+    axisSet.yAxis.labelingPolicy = CPTAxisLabelingPolicyAutomatic;
 	axisSet.yAxis.labelingPolicy = CPTAxisLabelingPolicyNone;
 //	axisSet.yAxis.title = @"Scores";
 //	axisSet.yAxis.titleTextStyle = axisTitleStyle;

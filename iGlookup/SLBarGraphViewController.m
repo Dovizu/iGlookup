@@ -54,7 +54,7 @@
 
 #pragma mark - Chart behavior
 -(void)initPlot {
-    bins = [_distribution.numInBin count];
+    bins = [_distribution.numInBin count] - 1;
     maxValue = [[_distribution.numInBin valueForKeyPath:@"@max.intValue"] floatValue];
     barWidth = 1.0f;
     self.hostView.allowPinchScaling = NO;
@@ -71,12 +71,17 @@
 	self.hostView.hostedGraph = graph;
     
 	// 2 - Configure the graph
-    
+ 
 	[graph applyTheme:[CPTTheme themeNamed:kCPTPlainWhiteTheme]];
     graph.plotAreaFrame.borderLineStyle = nil; //no graph border
 	graph.paddingBottom = 20.0f;
-    int numDigits = (int)[[_distribution.maximum stringValue] length];
-	graph.paddingLeft  = numDigits * 5 + 35.0f;
+    NSString *num = [_distribution.thirdQuartile stringValue];
+    NSRange range = [num rangeOfString:@"."];
+    if (range.location != NSNotFound) {
+        num = [num substringToIndex:range.location];
+    }
+    int numDigits = (int)[num length];
+	graph.paddingLeft  = numDigits * 15 + 60.0f;
 	graph.paddingTop    = 20.0f;
 	graph.paddingRight  = 40.0f;
     
@@ -100,7 +105,7 @@
 	// 5 - Set up plot space
 	CGFloat xMin = 0.0f;
 	CGFloat xMax = maxValue;
-	CGFloat yMin = 0.0f;
+	CGFloat yMin = -0.5f; // setting yMin to -0.5f makes sure the lowest bar is not cut in half
 	CGFloat yMax = bins;  // should determine dynamically based on max price
 	CPTXYPlotSpace *plotSpace = (CPTXYPlotSpace *) graph.defaultPlotSpace;
 	plotSpace.xRange = [CPTPlotRange plotRangeWithLocation:CPTDecimalFromFloat(xMin) length:CPTDecimalFromFloat(xMax)];
@@ -164,15 +169,16 @@
 //	axisSet.yAxis.titleTextStyle = axisTitleStyle;
 //	axisSet.yAxis.titleOffset = 5.0f;
 	axisSet.yAxis.axisLineStyle = axisLineStyle;
+
     
     NSArray *numInBin = _distribution.numInBin;
     NSArray *upperBounds = _distribution.upperBounds;
     NSMutableSet *yLabels = [NSMutableSet setWithCapacity:bins];
     NSMutableSet *yLocations = [NSMutableSet setWithCapacity:bins];
     NSInteger i = 0;
-    while (i<[numInBin count]) {
+    while (i<[numInBin count] - 1) {
         
-		CPTAxisLabel *label = [[CPTAxisLabel alloc] initWithText:[NSString stringWithFormat:@"%@",upperBounds[i]]  textStyle:axisSet.yAxis.labelTextStyle];
+		CPTAxisLabel *label = [[CPTAxisLabel alloc] initWithText:[NSString stringWithFormat:@"%@ - %@",upperBounds[i],upperBounds[i+1]]  textStyle:axisSet.yAxis.labelTextStyle];
 		CGFloat location = i++;
 		label.tickLocation = CPTDecimalFromCGFloat(location);
 		label.offset = axisSet.yAxis.majorTickLength;
